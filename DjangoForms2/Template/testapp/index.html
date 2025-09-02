@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project_name }} - Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to {{ project_name }}</h1>
+            <p>Your Django project is running successfully!</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Project Information</h2>
+                <ul>
+                    <li><strong>Project:</strong> {{ project_name }}</li>
+                    <li><strong>App:</strong> {{ app_name }}</li>
+                    <li><strong>Django Version:</strong> {{ django_version }}</li>
+                    <li><strong>Python Version:</strong> {{ python_version }}</li>
+                    <li><strong>Debug Mode:</strong> {{ debug_status|yesno:"ON,OFF" }}</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/admin/">Admin Panel</a></li>
+                    <li><a href="https://docs.djangoproject.com/" target="_blank">Django Documentation</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Created using Blemmer's Django Automation Script</p>
+        </footer>
+    </div>
+</body>
+</html>

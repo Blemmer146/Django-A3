@@ -1,0 +1,22 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <h1>Enter the Items</h1>
+    <form action="{% url 'form' %}">
+        Item<input type="text" name="item">
+        Quantity<input type="number" name="quantity">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

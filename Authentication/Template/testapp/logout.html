@@ -1,0 +1,9 @@
+{% extends "testapp/base.html" %}
+
+{% block content %}
+<h1>Logout Successful</h1>
+<p>You have been logged out. <br> <a href="{% url 'login' %}"><button class="btn btn-primary">
+    Login Again
+</button></a></p>
+
+{% endblock %}

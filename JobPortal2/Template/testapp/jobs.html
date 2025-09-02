@@ -1,0 +1,50 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/jobs.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<!--This is the page that must be linked to for each location tagged job just the location should change based on link clicked-->
+<h1>Job Listings</h1>
+<p>Here are the job listings for {{city}}.</p>
+{% if city %}
+    <h2>Jobs in {{city}}</h2>
+    <table>
+        <tr>
+            <th>Company Name</th>
+            <th>Designation</th>
+            <th>Package</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+        </tr>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.company_name }}</td>
+            <td>{{ job.designation }}</td>
+            <td>{{ job.package }}</td>
+            <td>{{ job.location }}</td>
+            <td>{{ job.email }}</td>
+            <td>{{ job.contact_number }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No jobs available for this location.</p>
+{% endif %}
+<nav>
+    <ul>
+        <li><a href="/home">Back to Home</a></li>
+        <li><a href="/pune">View Pune Jobs</a></li>
+        <li><a href="/hyd">View Hyderabad Jobs</a></li>
+        <li><a href="/mum">View Mumbai Jobs</a></li>
+    </ul>
+</nav>
+</body>
+</html>

@@ -1,0 +1,173 @@
+rShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for newpy manage.p features and improvements! https://aka.ms/PSWindows
+
+(.venv) PS D:\PythonProjects\Django> pip install Django==4.2
+Collecting Django==4.2
+  Obtaining dependency information for Django==4.2 from https://files.pythonhosted.org/packages/d9/40/6012f98b14b64b4d3dc47b0c2f116fccbd0795ab35515d0c40dac73b81b8/Django-4.2-py3-none-any.whl.metadata
+  Downloading Django-4.2-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref<4,>=3.6.0 (from Django==4.2)
+  Obtaining dependency information for asgiref<4,>=3.6.0 from https://files.pythonhosted.org/packages/7c/3c/0464dcada90d5da0e71018c04a140ad6349558afb30b3051b4264cc5b965/asgiref-3.9.1-py3-none-any.whl.metadata
+  Downloading asgiref-3.9.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from Django==4.2)
+  Obtaining dependency information for sqlparse>=0.3.1 from https://files.pythonhosted.org/packages/a9/5c/bfd6bd0bf979426d405cc6e71eceb8701b148b16c21d2dc3c261efc61c7b/sqlparse-0.5.3-py3-none-any.whl.metadata
+  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from Django==4.2)
+  Obtaining dependency information for tzdata from https://files.pythonhosted.org/packages/5c/23/c7abc0ca0a1526a0774eca151daeb8de62ec457e77262b66b359c3c7679e/tzdata-2025.2-py2.py3-none-any.whl.metadata
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading Django-4.2-py3-none-any.whl (8.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 1.2 MB/s eta 0:00:00
+Downloading asgiref-3.9.1-py3-none-any.whl (23 kB)
+Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 363.6 kB/s eta 0:00:00
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 1.7 MB/s eta 0:00:00
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-4.2 asgiref-3.9.1 sqlparse-0.5.3 tzdata-2025.2
+
+[notice] A new release of pip is available: 23.2.1 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(.venv) PS D:\PythonProjects\Django> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in d:\pythonprojects\django\.venv\lib\site-packages (23.2.1)
+Collecting pip
+  Obtaining dependency information for pip from https://files.pythonhosted.org/packages/29/a2/d40fb2460e883eca5199c62cfc2463fd261f760556ae6290f88488c362c0/pip-25.1.1-py3-none-any.whl.metadata
+  Downloading pip-25.1.1-py3-none-any.whl.metadata (3.6 kB)
+Downloading pip-25.1.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 31.1 kB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.2.1
+    Uninstalling pip-23.2.1:
+      Successfully uninstalled pip-23.2.1
+Successfully installed pip-25.1.1
+(.venv) PS D:\PythonProjects\Django> django-admin startproject ICICI
+(.venv) PS D:\PythonProjects\Django> cd ICICI
+(.venv) PS D:\PythonProjects\Django\ICICI> py manage.py startapp Insurance
+(.venv) PS D:\PythonProjects\Django\ICICI> tree /f
+Folder PATH listing for volume New Volume
+Volume serial number is EA6C-CBA6
+D:.
+│   manage.py
+│
+├───ICICI
+│   │   asgi.py
+│   │   settings.py
+│   │   urls.py
+│   │   wsgi.py
+│   │   __init__.py
+│   │
+│   └───__pycache__
+│           settings.cpython-311.pyc
+│           __init__.cpython-311.pyc
+│
+└───Insurance
+    │   admin.py
+    │   apps.py
+    │   models.py
+    │   tests.py
+    │   views.py
+    │   __init__.py
+    │
+    └───migrations
+            __init__.py
+
+(.venv) PS D:\PythonProjects\Django\ICICI>
+
+
+
+
+
+
+add app to settings.py (insurance)
+views.py is used for buisness logic
+
+we can write use by using class or function
+to change port id  py manage.py runserver 7777
+
+
+DRY Principle
+Do not Repeat Yourself
+
+Asynchronous Server Gateway Interface-ASGI (in here we don't care about waiting for responses and is faster)
+Web Server Gateway Interface - WSGI (in here we wait for responses to come and is slower)
+
+
+urls.py-->Application Level
+
+Why?-->
+Maintainablity of code is easy
+Reusability of code
+
+
+
+Template tag
+jinja
+{{dic}}
+
+
+
+
+
+py manage.py makemigrations
+py manage.py sqlmigrate Storage 0001
+py manage.py migrate
+py manage.py shell
+py manage.py createsuperuser
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+(.venv) PS D:\PythonProjects\Django> cd DataBroker
+(.venv) PS D:\PythonProjects\Django\DataBroker> python manage.py makemigrations
+Migrations for 'DataFaker':
+  DataFaker\migrations\0001_initial.py
+    - Create model FakeUser
+(.venv) PS D:\PythonProjects\Django\DataBroker> python manage.py migrate
+Operations to perform:
+  Apply all migrations: DataFaker, admin, auth, contenttypes, sessions
+Running migrations:
+  Applying DataFaker.0001_initial... OK
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(.venv) PS D:\PythonProjects\Django\DataBroker> py manage.py shell
+Python 3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.db import connection
+>>> con = connection.cursor()
+>>> exit()
+(.venv) PS D:\PythonProjects\Django\DataBroker> py manage.py createsuperuser
+Username (leave blank to use 'acer'): blemmer146
+Email address: vibhordamahe@gmail.com
+Password:
+Password (again):
+The password is too similar to the username.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+
+
+Forms
+
+CSRF Cross Site Request Forgery
+csrf tokens

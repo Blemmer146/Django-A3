@@ -1,0 +1,25 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Property Management{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    {% block css %}{% endblock %}
+    <style>
+        body { background: #f8f9fa; margin: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        main { min-height: 70vh; }
+        footer { text-align: center; padding: 1em 0; color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    {% include 'testapp/navbar.html' %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ project_name }} | Powered by Django</p>
+    </footer>
+</body>
+</html>

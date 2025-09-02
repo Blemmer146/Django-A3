@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student List</title>
+</head>
+<body>
+    <div class="listcont">
+        {% if data %}
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in data %}
+                        <tr>
+                            <td>{{ student.name }}</td>
+                            <td>{{ student.age }}</td>
+                            <td>{{ student.email }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Record Not Found</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'testapp/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to <span style="color:#4CAF50">{{ project_name }}</span> - Home Page</h1>
+    <p>This is the home page of your Django project.</p>
+    <ul>
+        <li><strong>Project Name:</strong> {{ project_name }}</li>
+        <li><strong>App Name:</strong> {{ app_name }}</li>
+        <li><strong>Django Version:</strong> {{ django_version }}</li>
+    </ul>
+</div>
+{% endblock %}

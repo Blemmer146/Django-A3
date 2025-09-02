@@ -1,0 +1,101 @@
+/* studform.css */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px 24px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+form {
+    text-align: left;
+    margin-top: 18px;
+}
+
+form p {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    transition: border 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button[type="submit"] {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #217dbb;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 16px 6px;
+    }
+}

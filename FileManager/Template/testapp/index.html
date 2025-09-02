@@ -1,0 +1,42 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Data of Our Users</h1>
+<marquee behavior="scroll" direction="left" scrollamount="10" style="color: #fff; background: linear-gradient(90deg, #4e54c8, #8f94fb); padding: 10px; border-radius: 8px; font-size: 1.5em; font-weight: bold;">
+    <h2 style="display: inline; margin-right: 20px;">Welcome to the User Data Page</h2>
+    <span style="font-size: 1em; font-style: italic;">Here you can find the details of our registered users.</span>
+</marquee>
+
+{% if data %}
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Mob No.</th>
+            <th>Email</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for val in data %}
+        <tr>
+            <td>{{ val.username }}</td>
+            <td>{{ val.mob_no }}</td>
+            <td>{{ val.email }}</td>
+            <td>{{ val.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No data available.</p>
+{% endif %}
+
+</body>
+</html>
