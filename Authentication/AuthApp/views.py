@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from .forms import RegistrationForm
 import django
 import sys
 
@@ -45,3 +46,13 @@ def aptiexam(request):
 
 def logout(request):
     return render(request,'testapp/logout.html')
+
+def signup(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = RegistrationForm()
+    return render(request, 'testapp/signup.html', {'form': form})

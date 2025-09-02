@@ -28,4 +28,5 @@ urlpatterns = [
     path('sqlexam/', views.sqlexam, name='sql'),
     path('aptiexam/', views.aptiexam, name='apti'),
     path('logout/', views.logout, name='logout1'),
+    path('signup/', views.signup, name='signup'),
 ]
