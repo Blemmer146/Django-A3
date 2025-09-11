@@ -1,12 +1,21 @@
-{% extends 'testapp/base.html' %}
-
-{% block content %}
-  <div class="container mt-4">
-    <h2>Signup</h2>
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-primary">Sign Up</button>
-    </form>
+{% extends 'testapp/base.html' %} {% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header text-center">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="card-body">
+          <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %} {{ form.as_p }}
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 {% endblock %}

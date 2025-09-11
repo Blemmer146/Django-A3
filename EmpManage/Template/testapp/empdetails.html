@@ -1,0 +1,29 @@
+{% extends 'testapp/base.html' %} {% block content %}
+<table class="table table-bordered table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>ROLE</th>
+      <th>DESIGNATION</th>
+      <th>SALARY</th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for emp in data %}
+    <tr>
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.role }}</td>
+      <td>{{ emp.designation }}</td>
+      <td>{{ emp.salary }}</td>
+      <td>
+        <a href="" class="btn btn-primary btn-sm mr-2">Update</a
+        ><a href="" class="btn btn-danger btn-sm">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

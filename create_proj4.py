@@ -3,8 +3,8 @@ import subprocess
 from pathlib import Path
 
 # ==== Custom Names ====
-project_name = "Authentication"
-app_name = "AuthApp"
+project_name = "EmpManage"
+app_name = "EmpDetail"
 
 # ==== Paths ====
 base_dir = r"D:\PythonProjects\Django"
